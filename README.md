@@ -1,6 +1,6 @@
 # Simple Blog with i18n
 
-## Features:
+## Features
 - JavaScript Standard Style (http://standardjs.com)
 - ES7 async functions
 - express
@@ -11,7 +11,7 @@
 - i18n
 - and more
 
-## Future:
+## Future
 - auth
 - upload images
 - captcha
