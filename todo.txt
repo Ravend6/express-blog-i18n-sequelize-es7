@@ -1,0 +1,14 @@
+#ajax
+#flash
+#config
+#csrf
+#_methods
+#reset form
+#validation
+#orm mysql
+#i18n
+upload file and multiple files
+pagination
+captcha
+auth
+socket.io

@@ -1,0 +1,19 @@
+extends ../layouts/base
+
+include ../mixins/fields
+
+block title
+  - var title = __('Create %s', __('post'));
+  title #{title} | #{app.sitename}
+
+block content
+  h1= title
+  form#create-post(method='post')
+    input(type='hidden' name='_csrf' value=csrfToken)
+    +fieldInput('title', 'title')
+    +fieldTextarea('body', 'body')
+
+    button.btn.btn-default(type='submit')= __('Create')
+    button.btn.btn-danger.reset(type='reset')= __('Reset')
+
+  //- p= JSON.stringify(formErrors)

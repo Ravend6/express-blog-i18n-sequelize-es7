@@ -1,0 +1,9 @@
+mixin toastr(messageArray)
+  if messageArray[0].hasOwnProperty('success')
+    div#toastr(data-type="success")= messageArray[0].success
+  else if messageArray[0].hasOwnProperty('error')
+    div#toastr(data-type="error")= messageArray[0].error
+  else if messageArray[0].hasOwnProperty('info')
+    div#toastr(data-type="info")= messageArray[0].info
+  else if messageArray[0].hasOwnProperty('warning')
+    div#toastr(data-type="warning")= messageArray[0].warning

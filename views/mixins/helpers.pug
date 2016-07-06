@@ -1,0 +1,5 @@
+mixin helperDelete(action, text=__('Delete'))
+  form(action=action, method='post')
+    input(type='hidden', name='_method', value='delete')
+    input(type='hidden' name='_csrf' value=csrfToken)
+    button.btn.btn-danger(type='submit')= text

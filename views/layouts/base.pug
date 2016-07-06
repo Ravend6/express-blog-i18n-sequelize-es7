@@ -1,0 +1,31 @@
+include ../mixins/toastr
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='robots', content='all')
+    meta(name='_csrf', content=csrfToken)
+    block title
+      title Home | #{app.sitename}
+    block styles
+      link(rel='stylesheet', href='/bower/bootstrap/dist/css/bootstrap.min.css')
+      link(rel='stylesheet', href='/bower/toastr/toastr.min.css')
+      link(rel='stylesheet', href='/styles/main.css')
+  body
+    .container
+      if app.toastr.length > 0
+        +toastr(app.toastr)
+
+      block content
+
+    block scripts
+      script(src='/bower/jquery/dist/jquery.min.js')
+      script(src='/bower/bootstrap/dist/js/bootstrap.min.js')
+      script(src='/bower/toastr/toastr.min.js')
+      script(src='/scripts/lib/toastr.js')
+      script(src='/scripts/lib/reset.js')

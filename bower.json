@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "description": "",
+  "main": "",
+  "authors": [
+    "ravend6 <ravend6@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "toastr": "^2.1.2"
+  }
+}

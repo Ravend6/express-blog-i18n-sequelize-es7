@@ -1,0 +1,23 @@
+{
+	"Create": "Create",
+	"Edit": "Edit",
+	"Update": "Update",
+	"Delete": "Delete",
+	"Reset": "Reset",
+	"Create %s": "Create %s",
+	"flash post %s created": "Post %s created.",
+	"flash post %s updated": "Post %s updated.",
+	"flash post %s deleted": "Post %s deleted.",
+	"post": "post",
+	"posts": "posts",
+	"title": "title",
+	"body": "body",
+	"Validation notEmpty failed %s": "Field %s is required.",
+	"Validation unique %s": "This field value %s already exists.",
+	"Validation len %s min %s": "The number of characters in a field %s should be at least %s.",
+	"Validation len %s max %s": "The number of characters in a field %s can not exceed %s.",
+	"Validation len %s min %s max %s": "The number of characters in a field %s should be at least %s and no more %s.",
+	"Validation len failed %s": "Validation len failed %s",
+	"blog": "blog",
+	"Welcome to %": "Welcome to %"
+}

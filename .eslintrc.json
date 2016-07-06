@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react/prop-types": "off",
+    "generator-star-spacing": "off",
+    "space-before-function-paren": "off",
+    "comma-dangle": "off",
+    "jsx-quotes": "off"
+  },
+  "extends": ["standard", "standard-react"],
+  "parser": "babel-eslint"
+}

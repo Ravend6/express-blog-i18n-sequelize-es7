@@ -1,0 +1,36 @@
+extends ../layouts/base
+
+include ../mixins/helpers
+
+block title
+  - var title = post.title;
+  title #{title} | #{app.sitename}
+
+block content
+  article
+    h1 #{title}
+    p= helpers.moment(post.createdAt).fromNow()
+    p!= post.body
+    a.btn.btn-warning(href=`/${locale}/posts/${post.id}/edit`)= __('Edit')
+    br
+    br
+    +helperDelete(`/${locale}/posts/${post.id}`)
+    br
+    button.btn.btn-danger.post-delete(data-url=`/${locale}/posts/${post.id}`)= __('Delete') + ' ajax'
+
+
+block append scripts
+  script.
+    var csrf = $('head').find('meta[name="_csrf"]').attr('content');
+    $('.post-delete').on('click', function(e) {
+      $.ajax({
+        type: 'post',
+        url: $(this).data('url'),
+        data: {'_method': 'delete', '_csrf': csrf},
+        success: function (data, success) {
+          if (success === 'success') {
+            location.href = data.redirectTo;
+          }
+        }
+      });
+    });

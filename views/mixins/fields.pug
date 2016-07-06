@@ -1,0 +1,40 @@
+mixin fieldInput(name, label, type='text')
+  //- p= '1' +JSON.stringify(formErrors[0]['path'])
+  - var hasErro = false;
+  for error in formErrors
+    if error.path === name
+      - hasErro = true; break;
+  .form-group(class=hasErro ? 'has-error' : null)
+    label.control-label(for=name)= helpers.capitalize(__(label))
+    input.form-control(id=name, type=type, name=name, value=app.session.form ? app.session.form[name] : null)
+    for error in formErrors
+      if error.path === name
+        span.help-block= error.message
+        - break;
+
+mixin fieldTextarea(name, label, rows=5)
+  - var hasErro = false;
+  for error in formErrors
+    if error.path === name
+      - hasErro = true; break;
+  .form-group(class=hasErro ? 'has-error' : null)
+    label.control-label(for=name)= helpers.capitalize(__(label))
+    textarea.form-control(id=name, rows=rows, name=name)= app.session.form ? app.session.form[name] : null
+    for error in formErrors
+      if error.path === name
+        span.help-block= error.message
+        - break;
+
+//- mixin bInput(name, label, type='text')
+//-   .form-group(class=formErrors[name] ? 'has-error' : '')
+//-     label.control-label(for=name)= label
+//-     input.form-control(id=name, type=type, name=name, value=app.session.form ? app.session.form[name] : null)
+//-     if formErrors[name]
+//-       span.help-block= formErrors[name]
+//-
+//- mixin bTextarea(name, label, rows=5)
+//-   .form-group(class=formErrors[name] ? 'has-error' : '')
+//-     label.control-label(for=name)= label
+//-     textarea.form-control(id=name, rows=rows, name=name)= app.session.form ? app.session.form[name] : null
+//-     if formErrors[name]
+//-       span.help-block= formErrors[name]

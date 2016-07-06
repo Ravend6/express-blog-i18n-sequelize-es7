@@ -1,0 +1,11 @@
+extends ../layouts/base
+
+block title
+  title= message + ' | ' + app.sitename
+
+block content
+  h1= message
+  if error.status
+    h2= error.status
+  if error.stack
+    pre #{error.stack}

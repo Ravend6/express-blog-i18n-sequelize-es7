@@ -1,0 +1,17 @@
+extends ../layouts/base
+
+include ../mixins/fields
+
+block title
+  - var title = 'Edit ' + post.title;
+  title #{title} | #{app.sitename}
+
+block content
+  article
+    h1 #{title}
+    form(method='post')
+      input(type='hidden', name='_method', value='put')
+      input(type='hidden' name='_csrf' value=csrfToken)
+      +fieldInput('title', 'title')
+      +fieldTextarea('body', 'body')
+      button.btn.btn-default(type='submit')= __('Update')

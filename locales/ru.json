@@ -1,0 +1,22 @@
+{
+	"Create": "Создать",
+	"Edit": "Редактировать",
+	"Update": "Обновить",
+	"Delete": "Удалить",
+	"Reset": "Сброс",
+	"Create %s": "Создать %s",
+	"flash post %s created": "Запись %s создана.",
+	"flash post %s updated": "Запись %s обновлена.",
+	"flash post %s deleted": "Запись %s удалена.",
+	"post": "запись",
+	"posts": "записи",
+	"title": "заглавие",
+	"body": "текст",
+	"Validation notEmpty failed %s": "Поле %s обязательно для заполнения.",
+	"Validation unique %s": "Такое значение поля %s уже существует.",
+	"Validation len %s min %s": "Количество символов в поле %s должно быть не менее %s",
+	"Validation len %s max %s": "Количество символов в поле %s не может превышать %s.",
+	"Validation len %s min %s max %s": "Количество символов в поле %s должно быть не менее %s и не более %s.",
+	"blog": "блог",
+	"Welcome to %s": "Добро пожаловать на %s"
+}

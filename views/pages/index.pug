@@ -1,0 +1,15 @@
+extends ../layouts/base
+
+block title
+  - var title = helpers.capitalize(__('blog'))
+  title= `${title} | ${app.sitename}`
+
+block content
+  h1= title
+  p= __('Welcome to %s', __('blog'))
+  nav
+    ul
+      li
+        a(href='/ru/posts') Записи на русском
+      li
+        a(href='/en/posts') Posts on english

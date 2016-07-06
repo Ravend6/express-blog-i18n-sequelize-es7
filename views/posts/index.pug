@@ -1,0 +1,16 @@
+extends ../layouts/base
+
+block title
+  - var title = helpers.capitalize(__('posts'));
+  title #{title} | #{app.sitename}
+
+block content
+  h1= title
+  a(href=`/${locale}/posts/create`)= __('Create %s', __('post'))
+  each post in posts
+    article
+      h2
+        a(href=`/${locale}/posts/${post.id}`)=helpers.capitalize(post.title)
+      p!= post.body
+  //- code
+  //-   p= JSON.stringify(locals)
